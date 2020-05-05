@@ -33,7 +33,7 @@
     <div class="min-h-screen flex items-center justify-center">
         <div class="flex flex-col justify-around h-full">
             <div class="text-center">
-                <img src='./imgs/logo2.jpeg' width="400" alt="logo"></img>
+                <img src='./imgs/logo2.jpeg' width="600" alt="logo"></img>
             </div>
             <div>
                 <h1 class="text-center">Coming soon. Watch this space!</h1>
