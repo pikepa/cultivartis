@@ -17,29 +17,29 @@
 
 <body class="bg-gray-100 h-screen antialiased leading-none">
     <div class="flex flex-col">
-        {{-- @if(Route::has('login'))
+        @if(Route::has('login'))
         <div class="absolute top-0 right-0 mt-4 mr-4">
             @auth
             <a href="{{ url('/home') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Home') }}</a>
-        @else
-        <a href="{{ route('login') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">{{ __('Login') }}</a>
-        @if (Route::has('register'))
-        <a href="{{ route('register') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Register') }}</a>
+            @else
+            <a href="{{ route('login') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase pr-6">{{ __('Login') }}</a>
+            {{-- @if (Route::has('register'))
+            <a href="{{ route('register') }}" class="no-underline hover:underline text-sm font-normal text-teal-800 uppercase">{{ __('Register') }}</a>
+            @endif --}}
+            @endauth
+        </div>
         @endif
-        @endauth
-    </div>
-    @endif
-    --}}
-    <div class="min-h-screen flex items-center justify-center">
-        <div class="flex flex-col justify-around h-full">
-            <div class="text-center">
-                <img src='./imgs/logo2.jpeg' width="600" alt="logo"></img>
-            </div>
-            <div>
-                <h1 class="text-center">Coming soon. Watch this space!</h1>
+
+        <div class="min-h-screen flex items-center justify-center">
+            <div class="flex flex-col justify-around h-full">
+                <div class="text-center">
+                    <img src='./imgs/logo2.jpeg' width="600" alt="logo"></img>
+                </div>
+                <div>
+                    <h1 class="text-center">Coming soon. Watch this space!</h1>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 </body>
 
