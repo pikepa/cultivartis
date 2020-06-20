@@ -1,13 +1,27 @@
 <div class="mt-8">
-    <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Email
-    </label>
-    <div class="mt-1 relative rounded-md shadow-sm">
-        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <svg class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-            </svg>
+    <form wire:submit.prevent="register">
+        <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Email
+        </label>
+        <div class="mt-1 relative rounded-md shadow-sm">
+
+            <div>
+                <input wire:model="email" id="email" name="email" class="form-input block w-full pl-10 sm:text-sm sm:leading-5" placeholder="you@example.com" />
+
+            </div>
+            <div class="mt-2 text-red-600">
+                @error('email') <span>{{ $message }}</span> @enderror
+            </div>
+
         </div>
-        <input id="email" class="form-input block w-full pl-10 sm:text-sm sm:leading-5" placeholder="you@example.com" />
-    </div>
+        <div class="mt-6">
+            <span class=" rounded-md shadow-sm">
+                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent 
+                text-sm font-medium rounded-md  bg-yellow-600 hover:bg-yellow-500 text-gray-700 focus:outline-none focus:border-indigo-700">
+                    Register
+                </button>
+            </span>
+        </div>
+
+    </form>
+
 </div>
