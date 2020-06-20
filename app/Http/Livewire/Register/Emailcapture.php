@@ -8,6 +8,7 @@ use Livewire\Component;
 class Emailcapture extends Component
 {
     public $email='';
+    public $data;
 
     public function render()
     {
@@ -18,9 +19,9 @@ class Emailcapture extends Component
         $data = $this->validate([
             'email' => 'required|email|unique:contacts',
         ]);
-
+        
         Contact::create([
-            'email' => $data->email,
+            'email' => $data['email'],
         ]);
         return redirect('/');
     }
