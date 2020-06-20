@@ -1,5 +1,5 @@
 <div class="text-center space-y-2">
-    <p>Cultivartis will be releasing their latest book shortly,</p>
+    <p>The new book by Cultivartis will be released soon,</p>
     <p class="font-bold text-4xl"> 'The Erlang Enigma'</p>
     <p> all about getting the most out of </p>
     <p class="font-bold text-2xl">Managed Services for Telecoms'.</p>
