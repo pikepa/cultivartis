@@ -4,6 +4,10 @@ module.exports = {
     './resources/css/**/*.css',
   ],
   theme: {
+    fontFamily: {
+      display: ['EBGaramond','Gilroy', 'sans-serif'],
+      body: ['EBGaramond','Graphik', 'sans-serif'],
+    },
     extend: {
       colors: {
         'gold': '#FFAC00',

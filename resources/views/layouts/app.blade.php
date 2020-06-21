@@ -18,7 +18,7 @@
     <livewire:styles>
 </head>
 
-<body class="bg-gray-100 h-screen antialiased leading-none ">
+<body class="bg-gray-100 h-screen antialiased leading-none font-body">
     <div id="app">
         <x-menus.navweb />
         <div class="container mx-auto font-sans text-xl text-gray-800">

@@ -1,5 +1,13 @@
 @tailwind base;
 
+@font-face {
+  font-family: 'EBGaramond';
+  font-weight: 400;
+ src: local('EBGaramond'), url(/fonts/EBGaramond-VariableFont_wght.ttf) format('ttf');
+}
+
 @tailwind components;
+
+
 
 @tailwind utilities;
