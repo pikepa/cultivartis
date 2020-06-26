@@ -1,12 +1,11 @@
 <?php
 
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/', 'HomeController@welcome')->name('welcome');
-Route::get('/comingsoon', 'HomeController@comingSoon')->name('comingsoon');
 
-/**s
+/**
  * App Routes.
  */
 Route::group(['middleware' => 'auth'], function () {

@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'pink': '#ec008b',
+        'gold': '#FFAC00',
       }
     }
   },
