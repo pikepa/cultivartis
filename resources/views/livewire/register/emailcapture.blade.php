@@ -16,7 +16,7 @@
         <div class="mt-6">
             <span class=" rounded-md shadow-sm">
                 <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent 
-                text-sm font-medium rounded-md  bg-gold hover:bg-yellow-500 text-gray-700 focus:outline-none focus:border-indigo-700">
+                text-sm font-medium rounded-md  bg-pink hover:bg-purple-700 text-gray-700 focus:outline-none focus:border-indigo-700">
                     Register
                 </button>
             </span>
