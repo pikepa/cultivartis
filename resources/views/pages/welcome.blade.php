@@ -21,7 +21,7 @@
 
     <div class="flex flex-row justify-center">
         <video width="70%" controls>
-            <source src="{{URL::asset("imgs/TEEV6.MP4")}}" type="video/mp4">
+            <source src="{{URL::asset("/imgs/TEEV6.MP4")}}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
