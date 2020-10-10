@@ -12,5 +12,6 @@
     <div class="w-1/2">
         <livewire:register.emailcapture />
     </div>
+
 </div>
 @endsection
