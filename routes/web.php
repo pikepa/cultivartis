@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 
 Auth::routes(['register' => false]);
 
-Route::get('/', 'HomeController@welcome')->name('welcome');
+//Route::get('/', Welcome::class)->name('welcome');
+ Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
+ Route::get('/thebook', [HomeController::class, 'thebook'])->name('thebook');
 
 /**
  * App Routes.

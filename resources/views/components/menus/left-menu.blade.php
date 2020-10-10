@@ -1,9 +1,10 @@
 <div>
 
-    <div class=" bg-white rounded-lg shadow px-4 mx-4  md:ml-0 ">
+    <div class="px-4 mx-4 bg-white rounded-lg shadow  md:ml-0">
 
         <x-menus.group groupname='Home'>
             <x-menus.item routename='welcome'>Welcome</x-menus.item>
+            <x-menus.item routename='thebook'>The Book</x-menus.item>
             <x-menus.item routename='home'>Admin Home</x-menus.item>
         </x-menus.group>
 
@@ -16,7 +17,7 @@
             @auth
             {{auth()->user()->name}}<br>
             <x-menus.item routename='password.request'>Reset Password</x-menus.item>
-            <a href="{{ route('logout') }}" class="hover:font-semibold no-underline" onclick="event.preventDefault();
+            <a href="{{ route('logout') }}" class="no-underline hover:font-semibold" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
                 {{ csrf_field() }}

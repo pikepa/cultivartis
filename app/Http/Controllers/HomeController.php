@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth',['except' => 'welcome']);
+        $this->middleware('auth',['except' => ['welcome','thebook']]);
     }
 
     /**,
@@ -23,16 +23,20 @@ class HomeController extends Controller
      */
     public function home()
     {
-        return view('userhome');
+        return view('pages.userhome');
     }
     
     public function admin()
     {
-        return view('admindash');
+        return view('pages.admindash');
     }
 
     public function welcome()
     {
-        return view('welcome');
+        return view('pages.welcome');
+    }
+    public function thebook()
+    {
+        return view('pages.thebook');
     }
 }
