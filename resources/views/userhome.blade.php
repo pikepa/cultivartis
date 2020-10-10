@@ -1,6 +1,5 @@
-@extends('layouts.app')
+<x-layouts.app>
 
-@section('content')
 <div class="flex items-center">
     <div class="w-full">
 
@@ -21,4 +20,4 @@
         </div>
     </div>
 </div>
-@endsection
+</x-layouts.app>

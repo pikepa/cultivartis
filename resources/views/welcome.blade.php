@@ -1,17 +1,20 @@
-@extends('layouts.app')
+<x-layouts.app >
+    <div class="flex flex-row justify-center">
+        <div class="m-4">
+            <x-image-sets.book-image />
+        </div>
+        <div class="flex flex-col  items-center ">
 
-@section('content')
+            <div class="">
+                <x-input.centered.text />
+            </div>
 
-<div class="flex flex-col items-center ">
-    <div>
-        <img src='./imgs/logo4.svg' width="500" alt="logo"></img>
-    </div>
-    <div class="w-1/2">
-        <x-input.centered.text />
-    </div>
-    <div class="w-1/2">
-        <livewire:register.emailcapture />
+            <div class="w-10/12">
+                <livewire:register.emailcapture />
+            </div>
+
+        </div>
     </div>
 
-</div>
-@endsection
+
+</x-layouts.app>
