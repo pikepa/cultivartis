@@ -23,6 +23,15 @@ class EmailRegistrationTest extends TestCase
     }
 
     /** @test */
+    public function can_get_to_thebook_page()
+    {
+        $response = $this->get('/thebook');
+
+        $response->assertStatus(200)
+        ->assertSee('Why I decided to write');
+    }
+
+    /** @test */
     public function can_register_email_address()
     {
         Livewire::test('register.emailcapture')
