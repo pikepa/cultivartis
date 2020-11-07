@@ -10,10 +10,10 @@
         </div>
 
         <div class="flex flex-col items-center w-1/2">
-
             <div class="m-4 ">
                 <p class="text-2xl font-bold text-center ">Why I decided to write</p>
                 <p class="mb-4 text-2xl font-bold text-center"> 'The Erlang Enigma'</p>
+
                 <x-layouts.just_para>
                     As a CTO/VP Engineering & Operations I had been buying Managed Services on behalf of operators for over 20 years across 18 different countries. Likewise, having worked for three global Managed Service vendors each Managed Service contract being different both in scope, price, each Managed Service contract had its own nuances, like KPI and SLA’s.
                     </x-layouts.just-para>
