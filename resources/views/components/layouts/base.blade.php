@@ -21,12 +21,14 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
+
     @livewireStyles
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
 </head>
 
-<body>
+<body class='bg-yellow-100'>
 {{ $slot}}
 
 <script src="{{ url(mix('js/app.js')) }}"></script>

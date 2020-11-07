@@ -1,9 +1,9 @@
 <x-layouts.base>
 
-    <div class="h-screen bg-gray-50">
+    <div class="h-screen">
 
         <x-navbar />
-        <div class="container mx-auto p-4">
+        <div class="container p-4 mx-auto">
             <x-notification />
 
             {{ $slot}}
