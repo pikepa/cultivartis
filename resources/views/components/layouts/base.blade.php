@@ -25,13 +25,13 @@
     @livewireStyles
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.x/dist/alpine.min.js" defer></script>
 </head>
 
-<body class='bg-yellow-100'>
-{{ $slot}}
+<body class='bg-yellow-200'>
+    {{ $slot}}
 
-<script src="{{ url(mix('js/app.js')) }}"></script>
+    <script src="{{ url(mix('js/app.js')) }}"></script>
 
     @livewireScripts
 

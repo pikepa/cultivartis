@@ -1,16 +1,19 @@
 <div>
 
-    <div class="px-4 mx-4 bg-white rounded-lg shadow  md:ml-0">
+    <div class="px-4 mx-4 bg-white rounded-lg shadow md:ml-0">
 
         <x-menus.group groupname='Home'>
+            @guest
             <x-menus.item routename='welcome'>Welcome</x-menus.item>
             <x-menus.item routename='thebook'>The Book</x-menus.item>
+            @endguest
+            @auth
             <x-menus.item routename='home'>Admin Home</x-menus.item>
+            @endauth
         </x-menus.group>
 
         <x-menus.group groupname='Welcome'>
             @guest
-            <li class="hover:font-semibold"><a href="{{ url('login') }}"></i>Select Box</a></li>
             <li class="hover:font-semibold"><a href="{{ url('login') }}"></i>Sign In</a></li>
             @endguest
 
