@@ -3,7 +3,7 @@
     <div class="h-screen">
 
         <x-navbar />
-        <div class="container p-4 mx-auto">
+        <div class="container mx-auto">
             <x-notification />
 
             {{ $slot}}

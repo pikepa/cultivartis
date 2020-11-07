@@ -1,6 +1,6 @@
 <div>
 
-    <div class="px-4 mx-4 bg-white rounded-lg shadow md:ml-0">
+    <div class="px-4 mx-4 bg-white rounded-lg shadow border-rounded md:ml-0">
 
         <x-menus.group groupname='Home'>
             @guest

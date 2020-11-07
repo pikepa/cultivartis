@@ -1,12 +1,12 @@
 <x-layouts.app>
 
-    <div class="flex items-center mx-auto mt-32">
+    <div class="flex items-center mx-auto mt-24">
 
         <div class="flex flex-col justify-center sm:flex-row">
             <div class="m-4">
                 <x-image-sets.fr_book-image />
             </div>
-            <div class="flex flex-col items-center ">
+            <div class="flex flex-col items-center -mt-24">
 
                 <div class="">
                     <x-input.centered.text />
