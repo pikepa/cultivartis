@@ -1,7 +1,7 @@
 <x-layouts.app>
     <div>
         <div class="mt-4">
-            <p class="text-2xl font-bold text-center ">Why I decided to write</p>
+            <p class="text-2xl font-bold text-center ">Why we decided to write</p>
             <p class="mb-4 text-2xl font-bold text-center"> 'The Erlang Enigma'</p>
 
             <div class="text-justify">
