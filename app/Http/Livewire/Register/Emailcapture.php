@@ -9,6 +9,7 @@ class Emailcapture extends Component
 {
     public $email='';
     public $data;
+    public $check;
 
     public function render()
     {
@@ -18,6 +19,7 @@ class Emailcapture extends Component
     {
         $data = $this->validate([
             'email' => 'required|email|unique:contacts',
+            'check' => 'required|in:Enigma,enigma,ENIGMA',
         ]);
         
         Contact::create([

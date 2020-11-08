@@ -3,15 +3,22 @@
         <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Email
         </label>
         <div class="relative mt-1 rounded-md shadow-sm">
-
             <div>
                 <input wire:model="email" id="email" name="email" class="block w-full pl-10 form-input sm:text-sm sm:leading-5" placeholder="you@example.com" />
-
             </div>
             <div class="mt-2 text-red-600">
                 @error('email') <span>{{ $message }}</span> @enderror
             </div>
-
+        </div>
+        <label for="check" class="block text-sm font-medium leading-5 text-gray-700">Human Check
+        </label>
+        <div class="relative mt-1 rounded-md shadow-sm">
+            <div>
+                <input wire:model="check" id="check" name="check" class="block w-full pl-10 form-input sm:text-sm sm:leading-5" placeholder="Enter the 2nd word of the book name." />
+            </div>
+            <div class="mt-2 text-red-600">
+                @error('check') <span>{{ $message }}</span> @enderror
+            </div>
         </div>
         <div class="mt-6">
             <span class="rounded-md shadow-sm ">
