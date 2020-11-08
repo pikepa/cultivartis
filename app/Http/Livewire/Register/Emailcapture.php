@@ -19,7 +19,7 @@ class Emailcapture extends Component
     {
         $data = $this->validate([
             'email' => 'required|email|unique:contacts',
-            'check' => 'required|in:Enigma,enigma,ENIGMA',
+            'check' => 'required|in:Erlang,erlang,ERLANG',
         ]);
         
         Contact::create([
