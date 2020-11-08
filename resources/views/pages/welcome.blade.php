@@ -9,7 +9,7 @@
         </x-input.centered.text>
     </div>
 
-    <div class="mt-8 md:flex">
+    <div class="items-center mt-8 md:flex">
         <div class="mt-4 md:flex-shrink-0">
             <img class="w-24 h-24 overflow-hidden rounded-full" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" alt="Woman paying for a purchase">
         </div>
@@ -19,7 +19,7 @@
         </div>
     </div>
 
-    <div class="mt-4 md:flex">
+    <div class="items-center mt-4 md:flex">
 
         <div class="mt-4 md:mt-0 md:mr-6">
             <p class="mt-2 text-justify text-gray-700">Throughout our careers Bruce and I have had the privilege of working in something approaching 75 different countries, with operators and vendors who all have creatively added to the industry's sum total of knowledge and wisdom. But we saw that there was no single reference, no accumulation of the so called “best practises” that could be used to create a global standard for the management and performance of our networks.
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="mt-4 md:flex">
+    <div class="items-center mt-4 md:flex">
         <div class="mt-4 md:flex-shrink-0">
             <img class="w-24 h-24 overflow-hidden rounded-full" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" alt="Woman paying for a purchase">
         </div>
@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <div class="mt-4 md:flex">
+    <div class="items-center mt-4 md:flex">
 
         <div class="mt-4 md:mt-0 md:mr-6">
             <p class="mt-2 text-justify text-gray-700">The Erlang Enigma is the foundation stone of the strategist approach to our global community. The Erlang Enigma is a first of it’s kind in many ways; not only is it the first attempt to formalise and logicalise our approach to telecoms, it is the first point of reference, the first document which seeks to bring all the key processes and procedures together and therefore it is a unique de facto standard not for international communications but for truly “Global Communication”. It is a gateway to the future. Our business is to enable every citizen to be heard. Therefore it our responsibility to ensure that is provided as cost effectively and as simply as possible.
