@@ -1,4 +1,14 @@
 <x-layouts.app>
+
+    <div class="">
+        <x-input.centered.text>
+            <p>The new book by CultivartiS will be released soon,</p>
+            <p class="text-4xl font-bold"> 'The Erlang Enigma'</p>
+            <p> all about getting the most out of </p>
+            <p class="text-2xl font-bold">Managed Services for Telecoms'.</p>
+        </x-input.centered.text>
+    </div>
+
     <div class="mt-8 md:flex">
         <div class="mt-4 md:flex-shrink-0">
             <img class="w-24 h-24 overflow-hidden rounded-full" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" alt="Woman paying for a purchase">
@@ -50,10 +60,15 @@
             <div class="m-4">
                 <x-image-sets.fr_book-image />
             </div>
-            <div class="flex flex-col items-center -mt-24">
+            <div class="flex flex-col items-center -mt-12">
 
                 <div class="">
-                    <x-input.centered.text />
+                    <x-input.centered.text>
+                        <p class="mb-8 text-4xl font-bold"> 'The Erlang Enigma'</p>
+                        <x-menus.item routename='thebook'>Read More here</x-menus.item>
+
+                        <p> For further information please register below and we'll keep you updated.</p>
+                    </x-input.centered.text>
                 </div>
 
                 <div class="w-10/12">
