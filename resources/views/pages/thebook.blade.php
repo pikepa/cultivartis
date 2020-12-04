@@ -1,12 +1,12 @@
 <x-layouts.app>
-    <div>
-        <div class="mt-4">
+    <div class="">
+        <article class="p-4 mx-auto sm:w-2/3">
             <p class="text-2xl font-bold text-center ">Why we decided to write</p>
             <p class="mb-4 text-2xl font-bold text-center"> 'The Erlang Enigma'</p>
 
             <div class="text-justify">
-                <p class="mb-4">
-                    Managed services within the telecoms industry and particularly the mobile industry is with us to stay, there is no doubt of that. When we look to the future there is a vast array of services that can be outsourced and synergised in this way to draw on potential economy of scale. Day to day O & M is by no means the “be all and end all” of the service proposition. But in order to unlock the potential benefits, and they are vast, we need a global standard. In this way we can harmonise our efforts and create transportable results. <strong>The Erlang Enigma’s</strong> primary objective is to create that standard.
+                <p class="mb-4 ">
+                    Managed Services within the telecoms industry and particularly the mobile industry is with us to stay, there is no doubt of that. When we look to the future there is a vast array of services that can be outsourced and synergised in this way to draw on potential economy of scale. Day to day O & M is by no means the “be all and end all” of the service proposition. But in order to unlock the potential benefits, and they are vast, we need a global standard. In this way we can harmonise our efforts and create transportable results. <strong>The Erlang Enigma’s</strong> primary objective is to create that standard.
                 </p>
                 <p class="mb-4">
                     Throughout our careers Bruce and I have had the privilege of working in something approaching 75 different countries, with operators and vendors who all have creatively added to the industry's sum total of knowledge and wisdom. But we saw that there was no single reference, no accumulation of the so called “best practises” that could be used to create a global standard for the management and performance of our networks.
@@ -40,10 +40,6 @@
                     Ray Winfield
                 </p>
             </div>
-
-
-
-
-
-
+        </article>
+    </div>
 </x-layouts.app>

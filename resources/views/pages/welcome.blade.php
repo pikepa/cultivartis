@@ -11,7 +11,7 @@
 
     <div class="items-center mt-8 md:flex">
         <div class="mt-4 md:flex-shrink-0">
-            <img class="w-24 h-24 overflow-hidden rounded-full" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" alt="Woman paying for a purchase">
+            <img class="w-24 h-24 overflow-hidden rounded-full" src="/imgs/welcome/welcome2.jpg" alt="Woman paying for a purchase">
         </div>
         <div class="mt-4 md:mt-0 md:ml-6">
             <p class="mt-2 text-justify text-gray-700"> Managed services within the telecoms industry and particularly the mobile industry is with us to stay, there is no doubt of that. When we look to the future there is a vast array of services that can be outsourced and synergised in this way to draw on potential economy of scale. Day to day O & M is by no means the “be all and end all” of the service proposition. But in order to unlock the potential benefits, and they are vast, we need a global standard. In this way we can harmonise our efforts and create transportable results. <strong>The Erlang Enigma’s</strong> primary objective is to create that standard.
@@ -26,13 +26,13 @@
             </p>
         </div>
         <div class="mt-4 md:flex-shrink-0">
-            <img class="w-24 h-24 overflow-hidden rounded-full" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" alt="Woman paying for a purchase">
+            <img class="w-24 h-24 overflow-hidden rounded-full" src="/imgs/welcome/welcome4.jpg" alt="Woman paying for a purchase">
         </div>
     </div>
 
     <div class="items-center mt-4 md:flex">
         <div class="mt-4 md:flex-shrink-0">
-            <img class="w-24 h-24 overflow-hidden rounded-full" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" alt="Woman paying for a purchase">
+            <img class="w-24 h-24 overflow-hidden rounded-full" src="/imgs/welcome/welcome3.jpg" alt="Woman paying for a purchase">
         </div>
         <div class="mt-4 md:mt-0 md:ml-6">
             <p class="mt-2 text-justify text-gray-700"> For sure we have technical standards CDMA, 4G and so on. We have standards for international commerce and trade, standards for logistics etc. In short, we can buy an Oldsmobile in Australia and it will be essentially identical to one purchased in the United States, save for legal compliance matters.
@@ -49,7 +49,7 @@
             </p>
         </div>
         <div class="mt-4 md:flex-shrink-0">
-            <img class="w-24 h-24 overflow-hidden rounded-full" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" alt="Woman paying for a purchase">
+            <img class="w-24 h-24 overflow-hidden rounded-full" src="/imgs/welcome/welcome1.jpg" alt="Woman paying for a purchase">
         </div>
     </div>
 
