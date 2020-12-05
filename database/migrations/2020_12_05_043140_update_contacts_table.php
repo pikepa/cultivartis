@@ -14,7 +14,7 @@ class UpdateContactsTable extends Migration
     public function up()
     {
         Schema::table('contacts', function (Blueprint $table) {
-            $table->string('fullname')->after('id')->required();
+            $table->string('fullname')->after('id')->default('Interested');
             $table->string('companyname')->after('fullname')->nullable();
         });
     }
