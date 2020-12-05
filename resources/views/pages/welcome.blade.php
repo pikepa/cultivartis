@@ -20,8 +20,7 @@
                 </p>
             </div>
         </div>
-        
-        <x-register.bookblock />
+
 
         <div class="items-center mt-4 md:flex">
 
@@ -59,6 +58,7 @@
         </div>
 
 
+        <x-register.bookblock />
 
 
 
