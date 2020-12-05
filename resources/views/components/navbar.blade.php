@@ -1,5 +1,5 @@
 <div x-data="{ open: false }">
-    <nav class="w-full py-2 shadow  bg-gold">
+    <nav class="w-full py-2 shadow bg-gold ">
 
         <div class="container relative flex flex-row px-6 mx-auto md:px-0">
             <x-menus.hamburger-menu />
