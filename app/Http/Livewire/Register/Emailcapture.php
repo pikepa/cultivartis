@@ -22,12 +22,14 @@ class Emailcapture extends Component
         $data = $this->validate([
             'email' => 'required|email|unique:contacts',
             'fullname' => 'required|min:5',
-            'companyname' => 'required|min:5',
+            'companyname' => 'sometimes|min:5',
             'check' => 'required|in:Erlang,erlang,ERLANG',
         ]);
         
         Contact::create([
             'email' => $data['email'],
+            'fullname' => $data['fullname'],
+            'companyname' => $data['companyname'],
         ]);
         
         return redirect('/');

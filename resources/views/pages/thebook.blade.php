@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class="">
-        <article class="p-4 mx-auto sm:w-2/3">
+        <article class="p-4 mx-auto sm:w-5/6">
             <p class="text-2xl font-bold text-center ">Why we decided to write</p>
             <p class="mb-4 text-2xl font-bold text-center"> 'The Erlang Enigma'</p>
 
