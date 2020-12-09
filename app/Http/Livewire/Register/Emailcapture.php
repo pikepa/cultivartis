@@ -4,6 +4,9 @@ namespace App\Http\Livewire\Register;
 
 use App\models\Contact;
 use Livewire\Component;
+use App\Jobs\ProcessContactRequest;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ConfirmContactRegistration;
 
 class Emailcapture extends Component
 {
@@ -34,6 +37,10 @@ class Emailcapture extends Component
             'familyname' => $data['familyname'],
             'companyname' => $data['companyname'],
         ]);
+
+        //despatch confirmation request
+        ProcessContactRequest::dispatch($contact);
+
         
         return redirect('/');
     }
