@@ -28,18 +28,22 @@ class EmailRegistrationTest extends TestCase
         $response = $this->get('/thebook');
 
         $response->assertStatus(200)
-        ->assertSee('Why I decided to write');
+        ->assertSee('Why we decided to write');
     }
 
     /** @test */
     public function can_register_email_address()
     {
         Livewire::test('register.emailcapture')
+        ->set('firstname', 'Fredo')
+        ->set('familyname', 'Stormy')
+        ->set('companyname', 'Acme & Co')
         ->set('email', 'pikepeter@gmail.com')
+        ->set('check', 'erlang')
         ->call('register')
         ->assertRedirect('/');
 
-        $this->assertTrue(Contact::whereEmail('pikepeter@gmail.com')->exists());    
+        $this->assertDatabaseHas('contacts',['email' => 'pikepeter@gmail.com']);    
     }
 
 

@@ -28,7 +28,7 @@ class Emailcapture extends Component
             'check' => 'required|in:Erlang,erlang,ERLANG',
         ]);
         
-        Contact::create([
+        $contact = Contact::create([
             'email' => $data['email'],
             'firstname' => $data['firstname'],
             'familyname' => $data['familyname'],
