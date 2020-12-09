@@ -14,8 +14,9 @@ class UpdateContactsTable extends Migration
     public function up()
     {
         Schema::table('contacts', function (Blueprint $table) {
-            $table->string('fullname')->after('id')->default('Interested');
-            $table->string('companyname')->after('fullname')->nullable();
+            $table->string('firstname')->after('id')->default('Interested');
+            $table->string('familyname')->after('firstname')->default('Interested');
+            $table->string('companyname')->after('familyname')->nullable();
         });
     }
 
@@ -27,7 +28,7 @@ class UpdateContactsTable extends Migration
     public function down()
     {
         Schema::table('contacts', function (Blueprint $table) {
-            $table->dropColumn(['fullname', 'companyname']);
+            $table->dropColumn(['firstname','familyname', 'companyname']);
         });
     }
 }

@@ -1,14 +1,26 @@
 <div class="mt-8">
     <form wire:submit.prevent="register">
         <div>
-            <label for="fullname" class="block text-sm font-medium leading-5 text-gray-700">Full Name
+            <label for="firstname" class="block text-sm font-medium leading-5 text-gray-700">First Name
             </label>
             <div class="relative mt-1 rounded-md shadow-sm">
                 <div>
-                    <input wire:model="fullname" id="fullname" name="fullname" class="block w-full pl-3 form-input sm:text-sm sm:leading-5" placeholder="Tom Jones" />
+                    <input wire:model="firstname" id="firstname" name="firstname" class="block w-full pl-3 form-input sm:text-sm sm:leading-5" placeholder="Tom Jones" />
                 </div>
                 <div class="mt-2 text-red-600">
-                    @error('fullname') <span>{{ $message }}</span> @enderror
+                    @error('firstname') <span>{{ $message }}</span> @enderror
+                </div>
+            </div>
+        </div>
+        <div>
+            <label for="familyname" class="block text-sm font-medium leading-5 text-gray-700">Family Name
+            </label>
+            <div class="relative mt-1 rounded-md shadow-sm">
+                <div>
+                    <input wire:model="familyname" id="familyname" name="familyname" class="block w-full pl-3 form-input sm:text-sm sm:leading-5" placeholder="Tom Jones" />
+                </div>
+                <div class="mt-2 text-red-600">
+                    @error('familyname') <span>{{ $message }}</span> @enderror
                 </div>
             </div>
         </div>

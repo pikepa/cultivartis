@@ -34,10 +34,10 @@ class UserSeeder extends Seeder
 
 
         $user = User::find(1);
-        $user->assignrole('Super Admin', 'boxadmin');
-        $user = User::find(2);
-        $user->assignrole('boxadmin');
-        $user = User::find(3);
-        $user->assignrole('member');
+        $user->assignrole('Super Admin');
+        // $user = User::find(2);
+        // $user->assignrole('boxadmin');
+        // $user = User::find(3);
+        // $user->assignrole('member');
     }
 }

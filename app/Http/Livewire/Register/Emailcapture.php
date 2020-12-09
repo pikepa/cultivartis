@@ -8,7 +8,8 @@ use Livewire\Component;
 class Emailcapture extends Component
 {
     public $email='';
-    public $fullname='';
+    public $firstname='';
+    public $familyname='';
     public $companyname='';
     public $data;
     public $check;
@@ -21,14 +22,16 @@ class Emailcapture extends Component
     {
         $data = $this->validate([
             'email' => 'required|email|unique:contacts',
-            'fullname' => 'required|min:5',
+            'firstname' => 'required|min:5',
+            'familyname' => 'required|min:5',
             'companyname' => 'sometimes|min:5',
             'check' => 'required|in:Erlang,erlang,ERLANG',
         ]);
         
         Contact::create([
             'email' => $data['email'],
-            'fullname' => $data['fullname'],
+            'firstname' => $data['firstname'],
+            'familyname' => $data['familyname'],
             'companyname' => $data['companyname'],
         ]);
         
