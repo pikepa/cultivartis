@@ -22,9 +22,9 @@ class Emailcapture extends Component
     {
         $data = $this->validate([
             'email' => 'required|email|unique:contacts',
-            'firstname' => 'required|min:5',
-            'familyname' => 'required|min:5',
-            'companyname' => 'sometimes|min:5',
+            'firstname' => 'required|min:5|max:50',
+            'familyname' => 'required|min:5|max:50',
+            'companyname' => 'sometimes|min:5|max:50',
             'check' => 'required|in:Erlang,erlang,ERLANG',
         ]);
         

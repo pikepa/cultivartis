@@ -47,36 +47,4 @@ class EmailRegistrationTest extends TestCase
     }
 
 
-    /** @test */
-    public function email_is_required()
-    {
-        Livewire::test('register.emailcapture')
-            ->set('email', '')
-            ->call('register')
-            ->assertHasErrors(['email' => 'required']);
-    }
-
-    /** @test */
-    function email_is_valid_email()
-    {
-        Livewire::test('register.emailcapture')
-            ->set('email', 'calebporzio')
-            ->call('register')
-            ->assertHasErrors(['email' => 'email']);
-    }
-
-    /** @test */
-    function email_hasnt_been_taken_already()
-    {
-        Contact::create([
-            'email' => 'calebporzio@gmail.com',
-        ]);
-
-        Livewire::test('register.emailcapture')
-        ->set('email', 'calebporzio@gmail.com')
-        ->call('register')
-        ->assertHasErrors(['email' => 'unique']);
-    }
-
-
 }
