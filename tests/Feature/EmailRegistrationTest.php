@@ -2,9 +2,11 @@
 
 namespace Tests\Feature;
 
-use App\models\Contact;
 use Tests\TestCase;
 use Livewire\Livewire;
+use App\models\Contact;
+use App\Jobs\ProcessContactRequest;
+use Illuminate\Support\Facades\Queue;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -45,6 +47,26 @@ class EmailRegistrationTest extends TestCase
 
         $this->assertDatabaseHas('contacts',['email' => 'pikepeter@gmail.com']);    
     }
+
+    /** @test */
+    public function a_job_was_streamed_to_process_contact()
+    {
+        Queue::fake();
+
+        Livewire::test('register.emailcapture')
+        ->set('firstname', 'Fredo')
+        ->set('familyname', 'Stormy')
+        ->set('companyname', 'Acme & Co')
+        ->set('email', 'pikepeter@gmail.com')
+        ->set('check', 'erlang')
+        ->call('register')
+        ->assertRedirect('/');
+
+    //    Queue::assertPushedOn( 'default' , ProcessContactRequest::class);
+    
+    }
+
+
 
 
 }

@@ -15,7 +15,7 @@ class ProcessContactRequest implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public $contact;
+    protected $contact;
     /**
      * Create a new job instance.
      *

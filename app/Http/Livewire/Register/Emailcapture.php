@@ -39,7 +39,7 @@ class Emailcapture extends Component
         ]);
 
         //despatch confirmation request
-        ProcessContactRequest::dispatch($contact);
+        ProcessContactRequest::dispatch($contact)->onQueue('emails');
 
         
         return redirect('/');
