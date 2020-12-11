@@ -8,6 +8,7 @@ use App\Jobs\ProcessContactRequest;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ConfirmContactRegistration;
 
+
 class Emailcapture extends Component
 {
     public $email='';
