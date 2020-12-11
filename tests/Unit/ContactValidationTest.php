@@ -29,6 +29,7 @@ test('Email must be unique', function () {
         'companyname' => 'Acme & Co',
         'email' => 'calebporzio@gmail.com',
     ]);
+    
     livewire(Emailcapture::class)
         ->set('email', 'calebporzio@gmail.com')
         ->call('register')
