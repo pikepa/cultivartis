@@ -32,12 +32,12 @@ class Emailcapture extends Component
             'check' => 'required|in:Erlang,erlang,ERLANG',
         ]);
         
-        $contact = Contact::create([
-            'email' => $data['email'],
-            'firstname' => $data['firstname'],
-            'familyname' => $data['familyname'],
-            'companyname' => $data['companyname'],
-        ]);
+        // $contact = Contact::create([
+        //     'email' => $data['email'],
+        //     'firstname' => $data['firstname'],
+        //     'familyname' => $data['familyname'],
+        //     'companyname' => $data['companyname'],
+        // ]);
 
         //despatch confirmation request
         ProcessContactRequest::dispatch($contact)->onQueue('emails');
