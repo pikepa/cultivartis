@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire\Register;
 
-use App\models\Contact;
+use App\Models\Contact;
 use Livewire\Component;
 use App\Jobs\ProcessContactRequest;
 use Illuminate\Support\Facades\Mail;
@@ -32,14 +32,14 @@ class Emailcapture extends Component
             'check' => 'required|in:Erlang,erlang,ERLANG',
         ]);
         
-        // $contact = Contact::create([
-        //     'email' => $data['email'],
-        //     'firstname' => $data['firstname'],
-        //     'familyname' => $data['familyname'],
-        //     'companyname' => $data['companyname'],
-        // ]);
+        $contact = Contact::create([
+            'email' => $data['email'],
+            'firstname' => $data['firstname'],
+            'familyname' => $data['familyname'],
+            'companyname' => $data['companyname'],
+        ]);
 
-        $contact = Contact::first();
+        // $contact = Contact::first();
 
         //despatch confirmation request
         ProcessContactRequest::dispatch($contact)->onQueue('emails');
