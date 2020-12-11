@@ -39,6 +39,8 @@ class Emailcapture extends Component
         //     'companyname' => $data['companyname'],
         // ]);
 
+        $contact = Contact::first();
+
         //despatch confirmation request
         ProcessContactRequest::dispatch($contact)->onQueue('emails');
 
