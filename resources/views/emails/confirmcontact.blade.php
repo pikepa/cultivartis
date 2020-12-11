@@ -9,7 +9,6 @@
  
     <a target="_blank" href="{{ URL::to('/confirm/' . $contact->token) }}">Click here to confirm your subscription.</a>
     <p class='mb-2'>If this was not you, then please ignore this email and we will not bother you again.</p>
-    {{$contact->token}}
     <p class='mb-2'>Many thanks for your time. </p>
     <p class='mb-2'>Ray and Bruce</p>
 </div>
