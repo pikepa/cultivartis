@@ -1,5 +1,13 @@
 <x-layouts.app>
-    <div class="">
+    <div class="flex flex-row">
+        <div class="mt-4">
+            <div class="m-2 mt-8 ">
+                <x-image-sets.fr_book-image />
+            </div>
+            <div class="m-2 mt-8 ">
+                <x-image-sets.bk_book-image />
+            </div>
+        </div>
         <article class="p-8 mx-auto sm:w-5/6">
             <p class="mb-8 text-4xl font-bold text-center"> 'The Erlang Enigma - Why?'</p>
 
