@@ -56,25 +56,13 @@ class EmailRegistrationTest extends TestCase
 
         $this->assertNull($contact->email_verified_at);
 
-        $this->get('/confirm/'.$contact->token)
-        ->assertSee('Thank you for confirming your registration');
+        $this->get('/confirm/'.$contact->token);
 
         $contact->refresh();
         $this->assertNotNull($contact->email_verified_at);
 
     }
-    /** @test */
-    public function can_not_reconfirm_email_address_with_token()
-    {
-        $this->registerSetup();
-        $contact = Contact::first();
-        $contact->email_verified_at = Carbon::now();
-        $contact->save();
-
-
-        $this->get('/confirm/'.$contact->token)
-        ->assertSee('The new book by CultivartiS will be released soon');
-    }
+ 
 
 
 

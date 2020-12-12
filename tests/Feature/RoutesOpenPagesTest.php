@@ -9,7 +9,7 @@ test('anyone can load home page', function () {
 
 test('anyone can load the book page', function () {
     $this->get('/thebook')->assertStatus(200)
-    ->assertSee('Why we decided to write');
+    ->assertSee('The Erlang Enigma - Why?');
 });
 
 test('register returns guest to thanks for registering page', function () {
