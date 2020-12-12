@@ -6,8 +6,9 @@
             @guest
             <x-menus.item routename='welcome'>Home</x-menus.item>
             <x-menus.item routename='thebook'>The Book</x-menus.item>
-            <x-menus.item routename='welcome'>Our Podcasts</x-menus.item>
-            <x-menus.item routename='welcome'>Consulting</x-menus.item>
+            <x-menus.item routename='comingsoon'>Snippets</x-menus.item>
+            <x-menus.item routename='comingsoon'>Our Podcasts</x-menus.item>
+            <x-menus.item routename='comingsoon'>Consulting</x-menus.item>
             @endguest
             @auth
             <x-menus.item routename='home'>Admin Home</x-menus.item>

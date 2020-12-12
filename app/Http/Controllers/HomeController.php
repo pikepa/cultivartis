@@ -15,7 +15,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth', ['except' => 
-        ['welcome', 'thebook', 'thanks', 'confirm','completed']]);
+        ['welcome', 'thebook', 'thanks', 'confirm','completed','comingsoon']]);
     }
 
     /**,
@@ -46,6 +46,11 @@ class HomeController extends Controller
     public function thanks()
     {
         return view('pages.registering.registerthanks');
+    }
+
+    public function comingsoon()
+    {
+        return view('pages.coming_soon');
     }
 
     public function completed()
