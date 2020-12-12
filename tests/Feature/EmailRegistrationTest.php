@@ -73,7 +73,7 @@ class EmailRegistrationTest extends TestCase
 
 
         $this->get('/confirm/'.$contact->token)
-        ->assertRedirect(404);
+        ->assertSee('The new book by CultivartiS will be released soon');
     }
 
 

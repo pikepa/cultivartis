@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
@@ -56,19 +55,18 @@ class HomeController extends Controller
 
     public function confirm($token)
     {
-        if (!$token) {
-            dd('there is no token');
-        }
 
         $contact = Contact::where('token', $token)->first();
 
-        if(!$contact){
-            $contact->email_verified_at = now();
-            $contact->token = null;
-            $contact->save();
+        if(is_null($contact)){
+            return redirect()->action([HomeController::class, 'welcome']);
         }
 
+        $contact->email_verified_at = now();
+        $contact->token = null;
+        $contact->save();
 
-        return Redirect::route('completed');
+        return redirect()->action([HomeController::class, 'completed']);
+    
     }
 }
