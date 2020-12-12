@@ -1,4 +1,4 @@
-<div x-data="{ open: false }">
+<div x-data="{ open: false }" x-cloak>
     <nav class="w-full py-2 shadow bg-gold ">
 
         <div class="container relative flex flex-row px-6 mx-auto md:px-0">
