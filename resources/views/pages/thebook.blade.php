@@ -1,10 +1,9 @@
 <x-layouts.app>
     <div class="">
-        <article class="p-4 mx-auto sm:w-5/6">
-            <p class="text-2xl font-bold text-center ">Why we decided to write</p>
-            <p class="mb-4 text-2xl font-bold text-center"> 'The Erlang Enigma'</p>
+        <article class="p-8 mx-auto sm:w-5/6">
+            <p class="mb-8 text-4xl font-bold text-center"> 'The Erlang Enigma - Why?'</p>
 
-            <div class="text-justify">
+            <div class="text-xl text-justify">
                 <p class="mb-4 ">
                     Managed Services within the telecoms industry and particularly the mobile industry is with us to stay, there is no doubt of that. When we look to the future there is a vast array of services that can be outsourced and synergised in this way to draw on potential economy of scale. Day to day O & M is by no means the “be all and end all” of the service proposition. But in order to unlock the potential benefits, and they are vast, we need a global standard. In this way we can harmonise our efforts and create transportable results. <strong>The Erlang Enigma’s</strong> primary objective is to create that standard.
                 </p>
