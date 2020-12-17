@@ -8,6 +8,7 @@ use Livewire\Livewire;
 use App\models\Contact;
 use Illuminate\Support\Str;
 use App\Jobs\ProcessContactRequest;
+use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -36,14 +37,22 @@ class EmailRegistrationTest extends TestCase
     }
 
     /** @test */
-    public function a_job_was_streamed_to_process_contact()
+    public function a_job_can_can_be_streamed_to_process_the_contact()
     {
+        // Fake the queue
         Queue::fake();
 
-        $this->registerSetup();
+        $contact = Contact::create([
+            'firstname' => 'Fredo',
+            'familyname' => 'Starr',
+            'companyname' => 'Acme & Co',
+            'email' => 'calebporzio@gmail.com',
+        ]);
+        // Push a job
+        ProcessContactRequest::dispatch($contact)->onQueue('emails');
 
-        //    Queue::assertPushedOn( 'default' , ProcessContactRequest::class);
-        $this->markTestSkipped('test to despatch job needed.');
+        // Assert the job was pushed to the queue
+        Queue::assertPushed(ProcessContactRequest::class);
     
     }
 
