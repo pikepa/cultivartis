@@ -1,4 +1,4 @@
-    <div class="flex items-center mx-auto mt-24">
+    <div class="flex justify-center mx-auto mt-24">
 
         <div class="flex flex-col justify-center sm:flex-row">
             <div class="m-4">
