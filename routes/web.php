@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\GuestMessages;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Livewire\ManagePodcasts;
 use App\Http\Livewire\Admin\ManageText;
 use App\Http\Controllers\HomeController;
 
@@ -22,4 +23,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'home'])->name('home');
     Route::get('/admin', [HomeController::class, 'admin'])->name('admin');
     Route::get('/text', ManageText::class)->name('text');
+    Route::get('/podcasts', ManagePodcasts::class)->name('podcasts');
+
 });
