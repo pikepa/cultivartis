@@ -1,4 +1,3 @@
-<div>
-<div class="mx-auto mt-8 text-4xl font-semibold text-center">Our Podcasts</div>
+<div class="flex flex-col ">
     <x-comingsoon />
 </div>

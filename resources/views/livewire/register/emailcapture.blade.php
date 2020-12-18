@@ -1,4 +1,6 @@
-<div class="p-6 mt-4 rounded bg-gray-50">
+<div class="p-6 pt-2 mt-4 rounded bg-yellow-50">
+    <p class="mb-2"> For further information please register here and we'll keep you updated.</p>
+
     <form wire:submit.prevent="register">
         <div>
             <label for="firstname" class="block text-sm font-medium leading-5 text-gray-700">First Name

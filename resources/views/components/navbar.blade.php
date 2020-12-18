@@ -1,5 +1,5 @@
 <div x-data="{ open: false }" x-cloak>
-    <nav class="w-full py-2 shadow bg-gold ">
+    <nav class="w-full py-2 shadow  bg-gold">
 
         <div class="container relative py-3 mx-auto md:px-0">
             <div class="absolute inset-y-0 left-0 ">
