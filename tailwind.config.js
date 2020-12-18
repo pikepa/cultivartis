@@ -1,7 +1,13 @@
 module.exports = {
   future: {
-    removeDeprecatedGapUtilities: true,
+    defaultLineHeights: true,
     purgeLayersByDefault: true,
+    removeDeprecatedGapUtilities: true
+  },
+  experimental: {
+    additionalBreakpoint: true,
+    extendedFontSizeScale: true,
+    extendedSpacingScale: true,
   },
   purge: [
     './resources/views/**/*.blade.php',
@@ -20,7 +26,7 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    require('@tailwindcss/custom-forms'),
+    require('@tailwindcss/forms'),
     require('@tailwindcss/typography')
     ]
 }

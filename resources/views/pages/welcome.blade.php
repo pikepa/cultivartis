@@ -58,8 +58,9 @@
         </div>
 
 
-        <x-register.bookblock />
-
+        <div class="mx-auto">
+            <x-register.bookblock />
+        </div>
 
 
         {{--

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\GuestMessages;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Livewire\Admin\ManageText;
 use App\Http\Controllers\HomeController;
@@ -12,6 +13,7 @@ Auth::routes(['register' => false]);
     Route::get('/completed', [HomeController::class, 'completed'])->name('completed');
     Route::get('/confirm/{token}', [HomeController::class, 'confirm'])->name('confirm');
     Route::get('/comingsoon', [HomeController::class, 'comingsoon'])->name('comingsoon');
+    Route::get('/messageus', GuestMessages::class)->name('guestmessage');
 
 /**
  * App Routes.
