@@ -1,12 +1,10 @@
-<div class="mt-8">
+<div class="mt-4">
     <form wire:submit.prevent="register">
         <div>
             <label for="firstname" class="block text-sm font-medium leading-5 text-gray-700">First Name
             </label>
-            <div class="relative mt-1 rounded-md shadow-sm">
-                <div>
-                    <input wire:model="firstname" id="firstname" name="firstname" class="block w-full pl-3 form-input sm:text-sm sm:leading-5" placeholder="Tom Jones" />
-                </div>
+            <div class="mt-2">
+                <input type=text wire:model="firstname" id="firstname" name="firstname" class="block w-full pl-3 rounded-md shadow-sm form-input sm:text-sm sm:leading-5" placeholder="Tom Jones" />
                 <div class="mt-2 text-red-600">
                     @error('firstname') <span>{{ $message }}</span> @enderror
                 </div>
@@ -15,9 +13,9 @@
         <div>
             <label for="familyname" class="block text-sm font-medium leading-5 text-gray-700">Family Name
             </label>
-            <div class="relative mt-1 rounded-md shadow-sm">
+            <div class="mt-2 ">
                 <div>
-                    <input wire:model="familyname" id="familyname" name="familyname" class="block w-full pl-3 form-input sm:text-sm sm:leading-5" placeholder="Tom Jones" />
+                    <input type=text wire:model="familyname" id="familyname" name="familyname" class="block w-full pl-3 rounded-md shadow-sm form-input sm:text-sm sm:leading-5" placeholder="Tom Jones" />
                 </div>
                 <div class="mt-2 text-red-600">
                     @error('familyname') <span>{{ $message }}</span> @enderror
@@ -27,9 +25,9 @@
         <div>
             <label for="companyname" class="block text-sm font-medium leading-5 text-gray-700">Company Name
             </label>
-            <div class="relative mt-1 rounded-md shadow-sm">
+            <div class="mt-1 ">
                 <div>
-                    <input wire:model="companyname" id="companyname" name="companyname" class="block w-full pl-3 form-input sm:text-sm sm:leading-5" placeholder="Acme Telscoms Co." />
+                    <input type=text wire:model="companyname" id="companyname" name="companyname" class="block w-full pl-3 rounded-md shadow-sm form-input sm:text-sm sm:leading-5" placeholder="Acme Telscoms Co." />
                 </div>
                 <div class="mt-2 text-red-600">
                     @error('companyname') <span>{{ $message }}</span> @enderror
@@ -41,7 +39,7 @@
             </label>
             <div class="relative mt-1 rounded-md shadow-sm">
                 <div>
-                    <input wire:model="email" id="email" name="email" class="block w-full pl-3 form-input sm:text-sm sm:leading-5" placeholder="you@example.com" />
+                    <input type=email wire:model="email" id="email" name="email" class="block w-full pl-3 rounded-md shadow-sm form-input sm:text-sm sm:leading-5" placeholder="you@example.com" />
                 </div>
                 <div class="mt-2 text-red-600">
                     @error('email') <span>{{ $message }}</span> @enderror
@@ -51,9 +49,7 @@
         <label for="check" class="block text-sm font-medium leading-5 text-gray-700">Human Check
         </label>
         <div class="relative mt-1 rounded-md shadow-sm">
-            <div>
-                <input wire:model="check" id="check" name="check" class="block w-full pl-3 form-input sm:text-sm sm:leading-5" placeholder="Enter the 2nd word of the book name." />
-            </div>
+            <input type=text wire:model="check" id="check" name="check" class="block w-full pl-3 rounded-md shadow-sm form-input sm:text-sm sm:leading-5" placeholder="Enter the 2nd word of the book name." />
             <div class="mt-2 text-red-600">
                 @error('check') <span>{{ $message }}</span> @enderror
             </div>
