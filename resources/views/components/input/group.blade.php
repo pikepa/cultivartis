@@ -5,7 +5,7 @@
 'helpText' => false,
 ])
 
-<div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-3">
+<div >
     <label for="{{ $for }}" class="block text-sm font-medium leading-5 text-gray-700 sm:mt-px sm:pt-2">
         {{ $label }}
     </label>
@@ -14,7 +14,7 @@
         {{ $slot }}
 
         @if ($error)
-        <div class="mt-1 text-red-500 text-sm">{{ $error }}</div>
+        <div class="mt-1 text-sm text-red-500">{{ $error }}</div>
         @endif
 
 
