@@ -15,10 +15,10 @@
             @endauth
         </x-menus.group>
 
-        
+
         <x-menus.group groupname='Welcome'>
-            @guest
             <li class="hover:font-semibold"><a href="{{ route('guestmessage') }}"></i>Contact Us</a></li>
+            @guest
             <li class="hover:font-semibold"><a href="{{ url('login') }}"></i>Sign In</a></li>
             @endguest
 
