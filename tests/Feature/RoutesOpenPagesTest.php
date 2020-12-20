@@ -19,7 +19,7 @@ test('register returns guest to thanks for registering page', function () {
 
 test('Any one can load the Contact Us page', function () {
     $this->get(route('guestmessage'))->assertStatus(200)
-    ->assertSee('Enter your message below');
+    ->assertSee('Create your message.');
 });
 
 

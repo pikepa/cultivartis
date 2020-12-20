@@ -11,6 +11,7 @@ Auth::routes(['register' => false]);
     Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
     Route::get('/thebook', [HomeController::class, 'thebook'])->name('thebook');
     Route::get('/thanks', [HomeController::class, 'thanks'])->name('thanks');
+    Route::get('/message/thanks', [HomeController::class, 'messagethanks'])->name('message.thanks');
     Route::get('/completed', [HomeController::class, 'completed'])->name('completed');
     Route::get('/confirm/{token}', [HomeController::class, 'confirm'])->name('confirm');
     Route::get('/comingsoon', [HomeController::class, 'comingsoon'])->name('comingsoon');

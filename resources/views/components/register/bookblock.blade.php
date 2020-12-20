@@ -1,10 +1,10 @@
-    <div class="flex justify-center mx-auto mt-20">
+    <div class="flex justify-center pt-4 mx-auto mt-4 ">
 
-        <div class="flex flex-col justify-center sm:flex-row">
+        <div class="flex flex-col justify-center sm:flex-row sm:items-center">
             <div class="m-4">
                 <x-image-sets.fr_book-image />
             </div>
-            <div class="flex flex-col items-center -mt-12">
+            <div class="flex flex-col items-center ">
 
                 <div class="">
                     <x-input.centered.text>
