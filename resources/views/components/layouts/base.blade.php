@@ -16,13 +16,12 @@
             display: none;
         }
     </style>
-    
-    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'>
-    <!--
-    <link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">   Favicon -->
 
+    <!-- <link rel='shortcut icon' href='asset(/favicon/favicon-96x96.png)'> -->
+
+    <link rel="shortcut icon" href="{{ asset('favicon/favicon-32x32.png') }}">
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel=" stylesheet" href="https://rsms.me/inter/inter.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
@@ -34,7 +33,7 @@
 </head>
 
 <body class='bg-yellow-100'>
-    
+
     {{ $slot}}
 
     <script src="{{ url(mix('js/app.js')) }}"></script>
