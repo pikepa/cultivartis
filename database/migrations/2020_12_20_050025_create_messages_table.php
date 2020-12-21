@@ -19,7 +19,7 @@ class CreateMessagesTable extends Migration
             $table->string('family_name');
             $table->string('email');
             $table->string('subject');
-            $table->text('message');
+            $table->text('message_body');
             $table->text('type');
             $table->timestamps();
         });

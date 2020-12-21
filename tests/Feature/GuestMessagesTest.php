@@ -19,7 +19,7 @@ $this->withoutExceptionHandling();
         ->set('message', 'This is a test message')
     //    ->set('check', 'erlang')
         ->call('sendmessage')
-        ->assertRedirect('/message/thanks');
+        ->assertSee('Thank you for your message');
 
         $this->assertDatabaseHas('messages', ['id' => 1]);
 

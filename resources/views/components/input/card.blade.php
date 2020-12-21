@@ -1,5 +1,8 @@
-    <div class="p-4 mx-auto shadow sm:rounded-md sm:w-1/2 bg-yellow-50">
 
-        {{ $slot}}
 
+    <div {{ $attributes->merge(['class' => 'mx-auto']) }}>
+        <div class='p-4 shadow sm:rounded-md bg-yellow-50' )>
+
+            {{ $slot}}
+        </div>
     </div>
