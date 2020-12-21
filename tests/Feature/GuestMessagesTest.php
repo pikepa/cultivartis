@@ -16,7 +16,7 @@ $this->withoutExceptionHandling();
         ->set('family_name', 'Stormy')
         ->set('email', 'pikepeter@gmail.com')
         ->set('subject', 'This is a test subject')
-        ->set('message', 'This is a test message')
+        ->set('message_body', 'This is a test message')
     //    ->set('check', 'erlang')
         ->call('sendmessage')
         ->assertSee('Thank you for your message');

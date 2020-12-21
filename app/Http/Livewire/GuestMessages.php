@@ -15,7 +15,7 @@ class GuestMessages extends Component
     public $message_body;
     public $type;
     public $subscribe=1;
-    public $messages;
+    public $listing;
 
 
     //page manipulations
@@ -47,13 +47,14 @@ class GuestMessages extends Component
     public function render()
     {
 
-        $this->messages = Message::orderBy('created_at', 'desc')->get();
+        $this->listing = Message::orderBy('created_at', 'desc')->get();
 
         return view('livewire.guest-messages');
     }
 
     public function sendmessage()
     {
+        $this->validate();
 
         Message::create([
             'first_name' => $this->first_name,

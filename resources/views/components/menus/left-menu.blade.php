@@ -17,13 +17,14 @@
 
 
         <x-menus.group groupname='Welcome'>
-            <li class="hover:font-semibold"><a href="{{ route('guestmessage') }}"></i>Contact Us</a></li>
             @guest
+            <li class="hover:font-semibold"><a href="{{ route('guestmessage') }}"></i>Contact Us</a></li>
             <li class="hover:font-semibold"><a href="{{ url('login') }}"></i>Sign In</a></li>
             @endguest
 
             @auth
-            {{auth()->user()->name}}<br>
+            <li class='text-blue-700 border-b-2' >{{auth()->user()->name}}</li>
+            <li class="hover:font-semibold"><a href="{{ route('guestmessage') }}"></i>Messages</a></li>
             <x-menus.item routename='password.request'>Reset Password</x-menus.item>
             <a href="{{ route('logout') }}" class="no-underline hover:font-semibold" onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
