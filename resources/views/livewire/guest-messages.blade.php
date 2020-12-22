@@ -72,6 +72,11 @@
 
     @if($showlist)
     <x-input.card class='w-2/3'>
+        <div>
+            <h3 class="mb-4 text-xl font-semibold leading-6 text-center text-gray-900">
+                Message Listing.
+            </h3>
+        </div>
         <div class="flex flex-col">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
