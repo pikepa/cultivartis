@@ -25,10 +25,10 @@ class GuestMessages extends Component
 
 
     protected $rules = [
-        'first_name' => 'required|min:3',
-        'family_name' => 'required|min:3',
+        'first_name' => 'required|min:3|max:50',
+        'family_name' => 'required|min:3|max:50',
         'email' => 'required|email',
-        'subject' => 'required|min:5',
+        'subject' => 'required|min:5|max:255',
         'message_body' => 'required|min:5',
         'type' => '',
     ];

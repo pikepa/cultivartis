@@ -1,7 +1,8 @@
 <?php
 
+use App\User;
 use Livewire\Livewire;
-use App\Models\Message;
+
 
 it('has guestmessages page', function () {
     $this->get('/messageus')->assertStatus(200)
@@ -9,7 +10,6 @@ it('has guestmessages page', function () {
 });
 
 it('can create a message', function(){
-$this->withoutExceptionHandling();
 
     Livewire::test('guest-messages')
         ->set('first_name', 'Peter')
@@ -23,4 +23,21 @@ $this->withoutExceptionHandling();
 
         $this->assertDatabaseHas('messages', ['id' => 1]);
 
+});
+
+it('shows a form when opened by an guest user', function(){
+
+    Livewire::test('guest-messages')
+        ->call('resetToForm')
+        ->assertSee('Messaging System')
+        ->assertSee('Create your message.');
+});
+
+it('shows a list when opened by an auth user', function(){
+
+    Livewire::actingAs(User::factory()->make())
+        ->test('guest-messages')
+        ->call('resetToList')
+        ->assertSee('Messaging System')
+        ->assertSee('Date');
 });
