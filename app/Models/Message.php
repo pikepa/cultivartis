@@ -10,4 +10,9 @@ class Message extends Model
     protected $guarded = [];
 
     use HasFactory;
+
+    public function getFullNameAttribute()
+    {
+        return "{$this['first_name']} {$this['family_name']}";
+    }
 }

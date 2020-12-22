@@ -106,7 +106,7 @@
                                         {{$entry->created_at}}
                                     </td>
                                     <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
-                                        {{$entry->first_name}}
+                                        {{$entry->FullName}}
                                     </td>
 
                                     <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
