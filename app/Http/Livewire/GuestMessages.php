@@ -22,6 +22,7 @@ class GuestMessages extends Component
     public $showthanks = false;
     public $showform = true;
     public $showlist = false;
+    public $read = '';
 
 
     protected $rules = [
@@ -36,8 +37,9 @@ class GuestMessages extends Component
     public function mount()
     {
 
-        if (! Auth::user())
+        if (! Auth::user()) 
         {
+            $this->read = '1';
             $this->resetToForm();
         }
         else{
@@ -70,6 +72,33 @@ class GuestMessages extends Component
         // return redirect(route('message.thanks'));
     }
 
+    public function viewMessage($id){
+        if($id){
+            $message = Message::find($id);
+        }
+            $this->first_name = $message->first_name;
+            $this->family_name = $message->family_name;
+            $this->email = $message->email;
+            $this->subject = $message->subject;
+            $this->message_body = $message->message_body;
+
+            $this->read='';
+            $this->resetToForm();
+    }
+
+    public function deleteMessage($id){
+        if($id){
+            $message = Message::find($id);
+        }
+            $message->delete();
+            $this->read='';
+            $this->resetToList();
+    }
+
+    public function gohome(){
+        return redirect('/');
+    }
+
     public function resetToThanks(){
         $this->showthanks = true;
         $this->showform = false;
@@ -86,6 +115,7 @@ class GuestMessages extends Component
         $this->showthanks = false;
         $this->showform = false;
         $this->showlist = true;
+
     }
 
 }

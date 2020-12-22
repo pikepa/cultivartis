@@ -2,6 +2,7 @@
 
 use App\User;
 use Livewire\Livewire;
+use App\Models\Message;
 
 
 it('has guestmessages page', function () {
@@ -40,4 +41,14 @@ it('shows a list when opened by an auth user', function(){
         ->call('resetToList')
         ->assertSee('Messaging System')
         ->assertSee('Date');
+});
+
+test('an Authorised user can view a message', function(){
+    
+    $message = Message::factory()->create();
+
+    Livewire::actingAs(User::factory()->create())
+            ->test('guest-messages')
+            ->call('viewMessage', $message->id)
+            ->assertSee($message->subject);
 });
