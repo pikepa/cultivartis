@@ -22,7 +22,6 @@ class GuestMessages extends Component
     public $showthanks = false;
     public $showform = true;
     public $showlist = false;
-    public $read = '';
 
 
     protected $rules = [
@@ -36,18 +35,18 @@ class GuestMessages extends Component
     
     public function mount()
     {
+        if (Auth::check()) {
+            $this->resetToList();
+        
+        } else {
 
-        if (! Auth::user()) 
-        {
-            $this->read = '1';
             $this->resetToForm();
         }
-        else{
-            $this->resetToList();
-        }
+
     }
     public function render()
     {
+
 
         $this->listing = Message::orderBy('created_at', 'desc')->get();
 
@@ -69,7 +68,6 @@ class GuestMessages extends Component
 
         $this->resetToThanks();
 
-        // return redirect(route('message.thanks'));
     }
 
     public function viewMessage($id){
@@ -82,7 +80,6 @@ class GuestMessages extends Component
             $this->subject = $message->subject;
             $this->message_body = $message->message_body;
 
-            $this->read='';
             $this->resetToForm();
     }
 
@@ -91,7 +88,7 @@ class GuestMessages extends Component
             $message = Message::find($id);
         }
             $message->delete();
-            $this->read='';
+
             $this->resetToList();
     }
 
@@ -106,16 +103,20 @@ class GuestMessages extends Component
     }
 
     public function resetToForm(){
+
         $this->showthanks = false;
         $this->showform = true;
         $this->showlist = false;
+     //   dd($this->readonly);
+
     }
 
     public function resetToList(){
-        $this->showthanks = false;
-        $this->showform = false;
-        $this->showlist = true;
 
+            $this->showthanks = false;
+            $this->showform = false;
+            $this->showlist = true;   
+        
     }
 
 }
