@@ -10,6 +10,17 @@ it('has guestmessages page', function () {
     ->assertSeeLivewire('guest-messages');
 });
 
+test('an Guest cannot view "Messages" in the menu', function () {
+
+    $this->get('/')->assertStatus(200)->assertDontSee('Messages');
+});
+
+test('an Authorised user can view "Messages" in the menu', function () {
+
+    $this->actingAs(User::factory()->make())
+        ->get('/')->assertStatus(200)->assertSee('Messages');
+});
+
 it('can create a message', function(){
 
     Livewire::test('guest-messages')
@@ -43,12 +54,16 @@ it('shows a list when opened by an auth user', function(){
         ->assertSee('Date');
 });
 
-test('an Authorised user can view a message', function(){
+test('an Authorised user can view a message list', function(){
+    
     
     $message = Message::factory()->create();
-
-    Livewire::actingAs(User::factory()->create())
-            ->test('guest-messages')
-            ->call('viewMessage', $message->id)
-            ->assertSee($message->subject);
+        $this->actingAs(User::factory()->create());
+        
+        Livewire::test('guest-messages')
+        ->call('resetToList')
+        ->assertSee($message->subject)
+        ->assertSee('View');
 });
+
+
