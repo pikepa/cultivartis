@@ -1,9 +1,8 @@
 <?php
 
-use Illuminate\Support\Str;
 use App\Http\Livewire\GuestMessages;
+use Illuminate\Support\Str;
 use function Pest\Livewire\livewire;
-
 
 test('Email is required', function () {
     livewire(GuestMessages::class)

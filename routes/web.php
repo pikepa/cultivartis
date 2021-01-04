@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Livewire\GuestMessages;
-use Illuminate\Support\Facades\Auth;
-use App\Http\Livewire\ManagePodcasts;
-use App\Http\Livewire\Admin\ManageText;
 use App\Http\Controllers\HomeController;
+use App\Http\Livewire\Admin\ManageText;
+use App\Http\Livewire\GuestMessages;
+use App\Http\Livewire\ManagePodcasts;
+use Illuminate\Support\Facades\Auth;
 
 Auth::routes(['register' => false]);
 
@@ -25,5 +25,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'home'])->name('home');
     Route::get('/admin', [HomeController::class, 'admin'])->name('admin');
     Route::get('/text', ManageText::class)->name('text');
-
 });

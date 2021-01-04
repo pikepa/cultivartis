@@ -2,20 +2,17 @@
 
 namespace App\Http\Livewire\Register;
 
-use App\Models\Contact;
-use Livewire\Component;
-use Illuminate\Support\Str;
 use App\Jobs\ProcessContactRequest;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\ConfirmContactRegistration;
-
+use App\Models\Contact;
+use Illuminate\Support\Str;
+use Livewire\Component;
 
 class Emailcapture extends Component
 {
-    public $email='';
-    public $firstname='';
-    public $familyname='';
-    public $companyname='';
+    public $email = '';
+    public $firstname = '';
+    public $familyname = '';
+    public $companyname = '';
     public $data;
     public $check;
 
@@ -23,6 +20,7 @@ class Emailcapture extends Component
     {
         return view('livewire.register.emailcapture');
     }
+
     public function register()
     {
         $data = $this->validate([
@@ -32,11 +30,10 @@ class Emailcapture extends Component
             'companyname' => 'sometimes|min:5|max:50',
             'check' => 'required|in:Erlang,erlang,ERLANG',
         ]);
-                
-        do{
-            $token = Str::random(16);
-        }while (Contact::where('token',$token)->first());
 
+        do {
+            $token = Str::random(16);
+        } while (Contact::where('token', $token)->first());
 
         $contact = Contact::create([
             'email' => $data['email'],
@@ -51,7 +48,6 @@ class Emailcapture extends Component
         //despatch confirmation request
         ProcessContactRequest::dispatch($contact)->onQueue('emails');
 
-        
         return redirect('/thanks');
     }
 }

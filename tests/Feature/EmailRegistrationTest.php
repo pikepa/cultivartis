@@ -2,20 +2,17 @@
 
 namespace Tests\Feature;
 
-use Carbon\Carbon;
-use Tests\TestCase;
-use Livewire\Livewire;
-use App\models\Contact;
-use Illuminate\Support\Str;
 use App\Jobs\ProcessContactRequest;
-use Illuminate\Support\Facades\Bus;
-use Illuminate\Support\Facades\Queue;
-use Illuminate\Foundation\Testing\WithFaker;
+use App\models\Contact;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Queue;
+use Livewire\Livewire;
+use Tests\TestCase;
 
 class EmailRegistrationTest extends TestCase
 {
     use RefreshDatabase;
+
     //this is a repeatable set up for these tests
     public function registerSetup()
     {
@@ -33,7 +30,7 @@ class EmailRegistrationTest extends TestCase
     public function can_register_email_address()
     {
         $this->registerSetup();
-        $this->assertDatabaseHas('contacts',['email' => 'pikepeter@gmail.com']);    
+        $this->assertDatabaseHas('contacts', ['email' => 'pikepeter@gmail.com']);
     }
 
     /** @test */
@@ -53,7 +50,6 @@ class EmailRegistrationTest extends TestCase
 
         // Assert the job was pushed to the queue
         Queue::assertPushed(ProcessContactRequest::class);
-    
     }
 
     /** @test */
@@ -69,11 +65,5 @@ class EmailRegistrationTest extends TestCase
 
         $contact->refresh();
         $this->assertNotNull($contact->email_verified_at);
-
     }
- 
-
-
-
-
 }

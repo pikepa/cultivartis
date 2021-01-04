@@ -1,12 +1,11 @@
 <?php
 
+use App\Http\Livewire\Register\Emailcapture;
 use App\Models\Contact;
 use Illuminate\Support\Str;
 use function Pest\Livewire\livewire;
-use App\Http\Livewire\Register\Emailcapture;
 
 test('Email is required', function () {
-    
     livewire(Emailcapture::class)
         ->set('email', '')
         ->call('register')
@@ -14,7 +13,6 @@ test('Email is required', function () {
 });
 
 test('Email must be an email address', function () {
-    
     livewire(Emailcapture::class)
         ->set('email', 'calebportio@')
         ->call('register')
@@ -22,14 +20,13 @@ test('Email must be an email address', function () {
 });
 
 test('Email must be unique', function () {
-
     Contact::create([
         'firstname' => 'Fredo',
         'familyname' => 'Starr',
         'companyname' => 'Acme & Co',
         'email' => 'calebporzio@gmail.com',
     ]);
-    
+
     livewire(Emailcapture::class)
         ->set('email', 'calebporzio@gmail.com')
         ->call('register')
@@ -37,7 +34,6 @@ test('Email must be unique', function () {
 });
 
 test('First Name is required', function () {
-
     livewire(Emailcapture::class)
         ->set('firstname', '')
         ->call('register')
@@ -45,7 +41,6 @@ test('First Name is required', function () {
 });
 
 test('First Name is min 5 chars', function () {
-
     livewire(Emailcapture::class)
         ->set('firstname', 'abc')
         ->call('register')
@@ -53,7 +48,6 @@ test('First Name is min 5 chars', function () {
 });
 
 test('First Name is max 50 chars', function () {
-
     livewire(Emailcapture::class)
         ->set('firstname', Str::random(51))
         ->call('register')
@@ -61,7 +55,6 @@ test('First Name is max 50 chars', function () {
 });
 
 test('Family Name is required', function () {
-
     livewire(Emailcapture::class)
         ->set('familyname', '')
         ->call('register')
@@ -69,7 +62,6 @@ test('Family Name is required', function () {
 });
 
 test('Family Name is min 5 chars', function () {
-
     livewire(Emailcapture::class)
         ->set('familyname', 'abc')
         ->call('register')
@@ -77,16 +69,13 @@ test('Family Name is min 5 chars', function () {
 });
 
 test('Family Name is max 50 chars', function () {
-
     livewire(Emailcapture::class)
         ->set('familyname', Str::random(51))
         ->call('register')
         ->assertHasErrors(['familyname' => 'max']);
 });
 
-
 test('Company Name is min 5 chars', function () {
-
     livewire(Emailcapture::class)
         ->set('companyname', 'abc')
         ->call('register')
@@ -94,7 +83,6 @@ test('Company Name is min 5 chars', function () {
 });
 
 test('Company Name is max 50 chars', function () {
-
     livewire(Emailcapture::class)
         ->set('companyname', Str::random(51))
         ->call('register')
