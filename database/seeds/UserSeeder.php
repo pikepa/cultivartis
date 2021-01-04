@@ -27,11 +27,10 @@ class UserSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-         
+
         ];
 
         DB::table('users')->insert($users);
-
 
         $user = User::find(1);
         $user->assignrole('Super Admin');

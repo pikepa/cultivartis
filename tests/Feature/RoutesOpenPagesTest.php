@@ -1,10 +1,8 @@
 <?php
 
 test('anyone can load home page', function () {
-
     $this->get('/')->assertStatus(200)
     ->assertSeeLivewire('register.emailcapture');
-
 });
 
 test('anyone can load the book page', function () {
@@ -21,6 +19,3 @@ test('Any one can load the Contact Us page', function () {
     $this->get(route('guestmessage'))->assertStatus(200)
     ->assertSee('Create your message.');
 });
-
-
- 
