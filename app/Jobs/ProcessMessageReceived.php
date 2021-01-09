@@ -4,12 +4,11 @@ namespace App\Jobs;
 
 use App\Mail\MessagedReceived;
 use Illuminate\Bus\Queueable;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Contracts\Queue\ShouldBeUnique;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Mail;
 
 class ProcessMessageReceived implements ShouldQueue
 {
@@ -24,7 +23,7 @@ class ProcessMessageReceived implements ShouldQueue
      */
     public function __construct($guestmessagein)
     {
-        $this->guestmessage = $guestmessagein;    
+        $this->guestmessage = $guestmessagein;
     }
 
     /**
@@ -35,6 +34,6 @@ class ProcessMessageReceived implements ShouldQueue
     public function handle()
     {
         Mail::to($this->guestmessage['email'])
-        ->send(new MessagedReceived($this->guestmessage));    
+        ->send(new MessagedReceived($this->guestmessage));
     }
 }
