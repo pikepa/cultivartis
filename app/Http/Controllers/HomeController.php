@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -14,9 +13,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth', ['except' => 
-        ['welcome', 'thebook', 'thanks', 'confirm',
-        'completed','comingsoon', 'messagethanks']]);
+        $this->middleware('auth', ['except' => ['welcome', 'thebook', 'thanks', 'confirm',
+            'completed', 'comingsoon', 'messagethanks', ]]);
     }
 
     /**,
@@ -66,10 +64,9 @@ class HomeController extends Controller
 
     public function confirm($token)
     {
-
         $contact = Contact::where('token', $token)->first();
 
-        if(is_null($contact)){
+        if (is_null($contact)) {
             return redirect()->action([HomeController::class, 'welcome']);
         }
 
@@ -78,6 +75,5 @@ class HomeController extends Controller
         $contact->save();
 
         return redirect()->action([HomeController::class, 'completed']);
-    
     }
 }

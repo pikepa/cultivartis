@@ -26,6 +26,6 @@ class UserFactory extends Factory
             'email' => $this->faker->safeEmail,
             'email_verified_at' => now(),
             'password' => bcrypt('password'),
-            ];
+        ];
     }
 }
