@@ -2,12 +2,10 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Message;
-use Livewire\Component;
-use App\Mail\MessagedReceived;
 use App\Jobs\ProcessMessageReceived;
+use App\Models\Message;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail;
+use Livewire\Component;
 
 class GuestMessages extends Component
 {
@@ -17,7 +15,7 @@ class GuestMessages extends Component
     public $subject;
     public $message_body;
     public $type;
-    public $subscribe=1;
+    public $subscribe = 1;
     public $guestmessage;
     public $listing;
 
@@ -55,7 +53,7 @@ class GuestMessages extends Component
     {
         $this->validate();
 
-       $this->guestmessage =  Message::create([
+        $this->guestmessage = Message::create([
             'first_name' => $this->first_name,
             'family_name' => $this->family_name,
             'email' => $this->email,
